@@ -4,23 +4,18 @@ url = "https://comic.naver.com/webtoon/list.nhn?titleId=675554"
 res = requests.get(url)
 res.raise_for_status()  
 soup = BeautifulSoup(res.text, "lxml")
-
-gauss = soup.find_all("td",attrs={"class":"title"}) 
-'''
-#<td class="title"> 속성 모두  찾아서 soup객체에 저장시키고 gauss에 동일하게 저장시킴
-<td class="title">
-<a href="/webtoon/detail.nhn?titleId=675554&amp;no=911&amp;weekday=mon" onclick="nclk_v2(event,'lst.title','675554','911')">후기 + 10년 후 가우스</a>
-</td>
-'''
-# for gaus in gauss :
-#     print(gaus.get_text())
-
-# type(gauss) : class 'bs4.element.ResultSet'
+      
 gauss = soup.find_all("div",attrs={"class":"rating_type"})
-
-for i in range(len(gauss)) :
-    rate = gauss[i].find("strong").get_text()
-    print(rate) 
+'''
+# html 코드 안에 있는 <div> 클래스가 rating_type인  속성 모두 찾아 soup에 저장시킨다.
+<div class="rating_type">
+<span class="star"><em style="width:99.81%">평점</em></span>
+	<strong>9.98</strong>
+</div>
+'''
+for i in range(len(gauss)) :   # <div class="rating_type">들 안에서 <strong>9.98</strong> 부분을 모두 찾아낸다.
+    rate = gauss[i].find("strong").get_text()  # 모두 찾아내서 text부분만 get하여 gauss[i]에 저장시킴
+    print(rate) # gauss[i]를 출력시킴 
 #실행결과
 '''
 9.98
@@ -34,4 +29,3 @@ for i in range(len(gauss)) :
 9.97
 9.97
 '''
-#1:43:11

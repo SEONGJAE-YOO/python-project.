@@ -12,11 +12,6 @@ gauss = soup.find_all("td",attrs={"class":"title"})
 <a href="/webtoon/detail.nhn?titleId=675554&amp;no=911&amp;weekday=mon" onclick="nclk_v2(event,'lst.title','675554','911')">후기 + 10년 후 가우스</a>
 </td>
 '''
-# for gaus in gauss :
-#     print(gaus.get_text())
-
-# type(gauss) : class 'bs4.element.ResultSet'
-gauss = soup.find_all("td",attrs={"class":"title"})
 
 for i in range(len(gauss)) :
     title = gauss[i].a.get_text()

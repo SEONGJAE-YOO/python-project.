@@ -22,5 +22,5 @@ for i in img:
            img = f.read()  #읽어와서 img변수안에 저장
            h.write(img)#파일명을 쓴다
     n +=1
-
+   
 print("다운로드 완료")
