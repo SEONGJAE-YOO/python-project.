@@ -26,7 +26,7 @@ for item  in items:
        rate =rate.get_text()
     else:  
         rate = "평점 없음"
-
+ 
     rate_cnt = item.find("span",attrs={"class":"rating-total-count"}) #평점 수    #<span class="rating-total-count">(18)</span>            
      # 평점 수 없는 것도 있어 오류가 나온다 그래서 if-else문으로 평점 수 없는것도 설정해 주어야한다.
     if rate_cnt:

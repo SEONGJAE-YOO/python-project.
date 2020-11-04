@@ -2,7 +2,7 @@
 #get 
 #post 
 import requests
-import re #정규식 
+import re #정규식   
 from bs4 import BeautifulSoup
 
 url = "https://www.coupang.com/np/search?q=%EB%85%B8%ED%8A%B8%EB%B6%81&channel=user&component=&eventCategory=SRP&trcid=&traid=&sorter=scoreDesc&minPrice=&maxPrice=&priceRange=&filterType=&listSize=36&filter=&isPriceRange=false&brand=&offerCondition=&rating=0&page=1&rocketAll=false&searchIndexingToken=&backgroundColor="
@@ -18,7 +18,7 @@ items = soup.find_all("li",attrs={"class":re.compile("^search-product")})
 #실행결과 -HP 노트북 15s-fq1003TU (i3-1005G1 39.6cm RAM 4GB SSD 128GB FHD IPS), 스노우 화이트
 
 for item  in items:
-
+  
     #광고 제품은 제외   #<span class="ad-badge-text">광고</span>
     ad_badge = item.find("span",attrs={"class":"ad-badge-text"})
     if ad_badge:
@@ -42,7 +42,7 @@ for item  in items:
        rate_cnt =rate_cnt.get_text()
     else:  
         rate_cnt = "평점 수 없음"
-   
+        
     print(name,price,rate,rate_cnt)
  
     '''
