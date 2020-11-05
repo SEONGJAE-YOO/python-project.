@@ -6,6 +6,8 @@ headers = {"user-agent:" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKi
   #크롤링 할때 컴퓨터가 url접근시 꼭 설정해야지만 크롤링이 된다.(사람이 url접근하는 경우랑 다르다) 
   # get 요청을 보낼때, python requests 로 보내게 되면 몇몇 사이트에서는 로봇이 요청하는것으로 인식해서 응답을 안해주고 차단하는 경우가 있다. 즉, requests로 접근하는 것을 비정상적인 접근으로 보고 차단을 하게 되는것이다.
   #따라서, 이런 경우에는 requests를 호출 할때 User-Agent 를 지정해서 크롬 브라우저에서의 요청인것으로 인식하게 만들어 오류를 해결가능
+
+#GET REQUEST 예시 1 : url 활용
 res =requests.get(url, headers={"User-Agent": "Mozilla/5.0"})  #url에 접근할때 user-agent 값 넘겨준다 
 res.raise_for_status()     
                              
