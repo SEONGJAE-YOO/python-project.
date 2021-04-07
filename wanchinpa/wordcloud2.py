@@ -1,4 +1,4 @@
-# 완주 여행 키워드 분석
+# 완주 여행 키워드 분석 워드클라우드 
 #Step 1. 필요한 모듈을 실행합니다.
 from konlpy.tag import *        #pip install konlpy 먼저 하세요
 import matplotlib.pyplot as plt #pip install matplotlib 먼저 하세요
