@@ -31,7 +31,7 @@ with open('C:/GIT/pythongame/resource/word.txt', 'r') as f:  # 문제 txt 파일
         words.append(c.strip())
 
 print(words)                                 # 단어 리스트 확인
-
+  
 input("Ready? Press Enter Key!")             # Enter Game Start!
 
 start = time.time()                          # Start Time
