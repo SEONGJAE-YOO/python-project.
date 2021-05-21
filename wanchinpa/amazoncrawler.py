@@ -4,7 +4,9 @@
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from bitmap import BitMap
+from bitmap import BitMap #많은 픽셀로 정교하고 다양한 색상을 가진 이미지를 만들 수 있다.
+                          #이미지 축소와 확대가 가능하지만 이미지가 깨질 수 있고 품질이 떨어진다.
+                          #JPG, JPEG, PNG, GIF
 
 import time
 import sys
@@ -12,7 +14,7 @@ import re
 import math
 import numpy 
 import pandas as pd   
-import xlwt 
+import xlwt  #xlwt는 엑셀 파일을 생성 하고 내용을 작성할 수 있게 해주는 라이브러리
 import random
 import os
 
@@ -157,7 +159,7 @@ driver.get(query_url)
 time.sleep(5)
 
 # 분야별 더보기 버튼을 눌러 페이지를 엽니다
-#<ul id="zg_browseRoot">  
+#<ul id="zg_browseRoot">   # xpath으로 찾기 
 if sec == '1' : 
       driver.find_element_by_xpath("""//*[@id="zg_browseRoot"]/ul/li[1]/a""").click( )
 elif sec == '2' :                    
@@ -247,15 +249,15 @@ time.sleep(1)
 #Step 4. 화면을 스크롤해서 아래로 이동한 후 요청된 데이터를 수집합니다.
 
 def scroll_down(driver):
-      
-      driver.execute_script("window.scrollBy(0,9300);")
+                                                             #window.scrollTo( X, Y ) 는 왼쪽 상단을 기준(절대위치)으로 하여 스크롤을 이동시키며, window.scrollBy( X, Y ) 는 현재 위치를 기준(상대위치)으로 하여 스크롤을 이동시켜준다는 차이가 있습니다.
+      driver.execute_script("window.scrollBy(0,9300);")   #driver.execute_script("window.scrollTo(0, Y)") ,여기서 Y 는 height 을 입력하면 됩니다.
       time.sleep(1)
 
 scroll_down(driver)
 
-# 비트맵 이미지 아이콘을 위한 대체 딕셔너리를 만듭니다
+# 비트맵 이미지 아이콘을 위한 대체 딕셔너리를 만듭니다 ,Create a dictionary from a sequence of keys
 bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
-
+#range으로 fromkeys 설정하기 
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
 
