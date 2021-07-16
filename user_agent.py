@@ -14,7 +14,7 @@ res.raise_for_status()
 with open("google.html", "w", encoding="utf8") as f:
     f.write(res.text)      # res.text내용을 파일로 만들기 
                    
-
+  
    
 #ValueError: Invalid header name b'user-agent:' 오류 문제 해결함
 #res =requests.get(url, headers=headers) 에서 

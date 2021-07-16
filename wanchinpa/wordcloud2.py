@@ -35,7 +35,7 @@ for a in data2 :
     elif a=="푸드" :
         data3.append(a.replace("푸드"," "))
     else :
-        data3.append(a)
+        data3.append(a)  
 print(data3)
 
 #Step 5. 추출된 단어들의 빈도를 조사한 후 많이 언급된 100개만 출력합니다

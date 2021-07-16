@@ -9,14 +9,14 @@ headers = {
 for idx in range(1, 17):
     url = "http://www.coupang.com/np/categories/498704?page=" + str(idx)
 
-    print(url)
+    print(url)  
     result = requests.get(url, headers=headers)
     soup_obj = BeautifulSoup(result.content, "html.parser")
 
     div = soup_obj.findAll("div", {"class": "name"})
     lis = soup_obj.find("ul", {"id": "productList"}).findAll("li")
 
-    for li in lis:
+    for li in lis:     
         product = li.find("div", {"class": "name"})
         price = li.find("em", {"class": "sale"}).find(
             "strong", {"class": "price-value"}

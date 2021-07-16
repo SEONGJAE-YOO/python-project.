@@ -90,7 +90,7 @@ cursor.execute(
 )
 
 # 접속 해제
-conn.close()
+conn.close()  
 
 # 수행 시간 출력
 print("게임 시간 :", et, "초", "정답 개수 : {}".format(cor_cnt))

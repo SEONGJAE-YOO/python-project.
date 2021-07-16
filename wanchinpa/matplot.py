@@ -89,4 +89,4 @@ from nltk.probability import FreqDist
     
 data11 = FreqDist(data7)  #FreqDist 클래스는 문서에 사용된 단어(토큰)의 사용빈도 정보를 담는 클래스이다.
 data11.plot(50)   
-         
+           

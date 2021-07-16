@@ -43,7 +43,7 @@ print("1.추출된 키워드:", data2)
 print("\n")
 data3 = Counter(data2)
 print("2.단어별 빈도수:",data3)
-
+  
 okt.pos(data1)  
 
 #Step 4. 불용어 제거하기
@@ -73,7 +73,7 @@ data8 = dict(data7)
 # # 이용 가능한 폰트 중 '고딕'만 선별
 # for font in fm.fontManager.ttflist:
 #     if 'Gothic' in font.name:
-#         print(font.name, font.fname)
+#         print(font.name, font.fname)  
 
 
 #Step 6. 워드 클라우드 그리기

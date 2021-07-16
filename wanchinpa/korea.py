@@ -69,11 +69,11 @@ data10 = dict(data9)
 import numpy as np         # pip install numpy /과학 계산을 위한 라이브러리로서 다차원 배열을 처리하는데 필요한 여러 유용한 기능을 제공
 from PIL import Image      # pip install Image
 from wordcloud import ImageColorGenerator
-korea = np.array(Image.open("c:\data\image\M2jeo.jpg"))
+korea = np.array(Image.open("c:\data\image\M2jeo.jpg"))  
 wc = WordCloud(font_path="C:\Windows\Fonts\H2GTRE.TTF" ,
                        relative_scaling=0.2,mask = korea,
                        background_color="white",
-                       min_font_size=1,
+                       min_font_size=1,  
                        max_font_size=50,
                        max_words=500
                      ).generate_from_frequencies(data10)

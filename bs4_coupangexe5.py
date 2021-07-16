@@ -72,7 +72,7 @@ for i in range(1,4): #1페이지에서 3페이지까지 조회
             print(f"평점:{rate}점 ({rate_cnt}개)")
             print("바로가기 : {}".format("https://www.coupang.com"+link)) # <a href="/vp/products/1786054433?  ....> 링크 앞에 coupang.com 생략 되있으므로 링크앞에 넣어주기
             print("-"*100) #줄긋기  
-            
+              
  
 #f-string 사용하기 - python 2에서 지원하던 %-formatting 방식과 format string syntax 인 str.format() 메서드 방식은 가독성 문제때문에 python 3.6이상 부터는 가독성 문제를 해결해 주는 f-string 기능을 제공해준다. 
 

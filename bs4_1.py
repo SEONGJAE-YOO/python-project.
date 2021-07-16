@@ -61,7 +61,7 @@ print(rank2.a.get_text())
 # 순위 데이터는 순식간에 바뀐다는 것을 코딩을 하다가 알게되었다. 신기한것 같다.
 rank1 = rank2.find_previous_sibling("li") #previous_sibling.previous_sibling를 find_previous_sibling으로 간단하게 만들수 있다
 print(rank1.a.get_text())
-#실행결과
+#실행결과 
 #연애혁명-323. 마음의 저울
 
 print(rank1.find_next_siblings("li"))   #rank1 기준으로 다음 <li>형제들을 모두 가져온다.

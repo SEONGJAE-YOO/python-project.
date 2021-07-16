@@ -302,7 +302,7 @@ if cnt < 51 :
             else :
              title2=title1.translate(bmp_map).replace("\n","") 
              print("2.제품소개:", title2.replace("\n",""))
-
+  
              count += 1  
              
              f.write('2.제품소개:'+ title2 + "\n")
@@ -558,7 +558,7 @@ amazon_best_seller.to_excel(fx_name ,index=True)
 
 e_time = time.time( )
 t_time = e_time - s_time
-
+ 
 # txt 파일에 크롤링 요약 정보 저장하기
 orig_stdout = sys.stdout
 f = open(ff_name, 'a',encoding='UTF-8')

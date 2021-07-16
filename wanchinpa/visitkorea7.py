@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
 import math
-import numpy  
+import numpy    
 import pandas as pd  
 import random
 import os
@@ -16,7 +16,7 @@ import re
 
 #Step 2. 사용자에게 검색어 키워드를 입력 받고 저장할 폴더와 파일명을 설정합니다.
 print("=" *80)
-print(" 8. 뉴스 기사의 댓글 정보  수집하기")
+print(" 8. 뉴스 기사의 댓글 정보  수집하기")  
 print("=" *80)
 print("\n")
 
@@ -33,7 +33,7 @@ s = '%04d-%02d-%02d-%02d-%02d-%02d' % (now.tm_year, now.tm_mon, now.tm_mday, now
 
 os.makedirs(f_dir+s+'-'+query_txt)
 os.chdir(f_dir+s+'-'+query_txt)
-
+  
 ff_name=f_dir+s+'-'+query_txt+'\\'+s+'-'+query_txt+'.txt'
 fc_name=f_dir+s+'-'+query_txt+'\\'+s+'-'+query_txt+'.csv'
 fx_name=f_dir+s+'-'+query_txt+'\\'+s+'-'+query_txt+'.xls'
@@ -261,6 +261,6 @@ print("2.총 소요시간은 %s 초 입니다 " %round(t_time,1))
 print("3.파일 저장 완료: txt 파일명 : %s " %ff_name)
 print("4.파일 저장 완료: csv 파일명 : %s " %fc_name)
 print("5.파일 저장 완료: xls 파일명 : %s " %fx_name)
-print("=" *80)
+print("=" *80)  
 
 driver.close( )

@@ -20,4 +20,4 @@ print(len(res.text))#가져온 웹페이지의 문자갯수 확인가능
 
 with open("mygoogle.html", "w", encoding="utf8") as f:
     f.write(res.text)      # res.text내용을 mygoogle.html파일로 만들기 
-    
+      
