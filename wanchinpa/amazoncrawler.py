@@ -13,7 +13,7 @@ import sys
 import re
 import math
 import numpy 
-import pandas as pd   
+import pandas as pd     
 import xlwt  #xlwt는 엑셀 파일을 생성 하고 내용을 작성할 수 있게 해주는 라이브러리
 import random
 import os
@@ -141,7 +141,7 @@ else :
 # Step 3. 저장될 파일위치와 이름을 지정 한 후 크롬 드라이버를 실행하여 페이지를 엽니다
 now = time.localtime()
 s = '%04d-%02d-%02d-%02d-%02d-%02d' % (now.tm_year, now.tm_mon, now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec)
-
+  
 os.makedirs(f_dir+s+'-'+query_txt+'-'+sec_name)
 os.chdir(f_dir+s+'-'+query_txt+'-'+sec_name)
 
@@ -152,7 +152,7 @@ fx_name=f_dir+s+'-'+query_txt+'-'+sec_name+'\\'+s+'-'+query_txt+'-'+sec_name+'.x
 
 s_time = time.time( )
 
-path = "C:/Users/MyCom/Downloads/chromedriver_win32 (3)/chromedriver"
+path = "c:/GIT/wanchinpa/driver/chromedriver.exe"
 driver = webdriver.Chrome(path)
     
 driver.get(query_url)
