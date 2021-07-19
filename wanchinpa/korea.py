@@ -17,7 +17,7 @@ kkma = Kkma()
   
 
 #Step 2 . 텍스트 파일을 불러와서 형태소 분석을 합니다.
-data1 = open("c:\\data\\완주여행_2017.txt").read( )
+data1 = open("wanchinpa/완주여행_2017.txt").read( )
 data1  
      
 print(data1)
@@ -52,7 +52,7 @@ data5 = data4.most_common(50)
 print("2.단어별 빈도수:",data5)
 
 #Step 6. 불용어 제거하기 :분석을 하는 것에 있어서는 큰 도움이 되지 않는 단어 제거
-sword = open("c:\\data\\와푸gsub.txt").read()
+sword = open("wanchinpa/와푸gsub.txt").read()
 #print(sword)
 data6 = [ each_word for each_word in data3
           if each_word not in sword ]
@@ -75,8 +75,8 @@ data10 = dict(data9)
 import numpy as np         # pip install numpy /과학 계산을 위한 라이브러리로서 다차원 배열을 처리하는데 필요한 여러 유용한 기능을 제공
 from PIL import Image      # pip install Image
 from wordcloud import ImageColorGenerator
-korea = np.array(Image.open("c:\data\image\M2jeo.jpg"))  
-wc = WordCloud(font_path="C:\Windows\Fonts\H2GTRE.TTF" ,
+korea = np.array(Image.open("wanchinpa/image/M2jeo.jpg"))  
+wc = WordCloud(font_path="wanchinpa/Fonts/H2HDRM.TTF" ,
                        relative_scaling=0.2,mask = korea,
                        background_color="white",
                        min_font_size=1,  
