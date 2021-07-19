@@ -1,25 +1,31 @@
 # 완주 여행 키워드 분석
 #Step 1. 필요한 모듈을 실행합니다.
-from konlpy.tag import *        #pip install konlpy 먼저 하세요
+# F1 키를 누른 후, python Select Interpreter 를 입력한다.text_analysis:conda 선택해서 터미널 실행
+#C:\Users\MyCom\anaconda3\envs\text_analysis
+# 참고사이트: https://ddochea.tistory.com/33 [또치의 삽질 보관함]
+from konlpy.tag import Kkma
+from konlpy.tag import Okt   
+
+     #pip install konlpy 먼저 하세요
 import matplotlib.pyplot as plt #pip install matplotlib 먼저 하세요
 from matplotlib import font_manager , rc
 from wordcloud import WordCloud  # pip install wordcloud 먼저 하세요
 from collections import Counter
 import nltk #자연어 처리를 위한 파이썬 패키지
 okt = Okt()
-kkma = Kkma( )
+kkma = Kkma()
   
 
 #Step 2 . 텍스트 파일을 불러와서 형태소 분석을 합니다.
 data1 = open("c:\\data\\완주여행_2017.txt").read( )
-data1
-
+data1  
+     
 print(data1)
 print("\n")
 
-#Step 3. 키워드를 추출합니다
+#Step 3. 키워드를 추출합니다   
 data2 = okt.nouns(data1)
-#data2 = kkma.nouns(data1)
+#data2 = kkma.nouns(data1)   
 print("1.추출된 키워드:", data2)
 print(len(data2))
 
@@ -64,7 +70,7 @@ data8 = Counter(data7)
 data9 = data8.most_common(50)
 print(data9)
 data10 = dict(data9)
-
+    
     
 import numpy as np         # pip install numpy /과학 계산을 위한 라이브러리로서 다차원 배열을 처리하는데 필요한 여러 유용한 기능을 제공
 from PIL import Image      # pip install Image
@@ -80,4 +86,4 @@ wc = WordCloud(font_path="C:\Windows\Fonts\H2GTRE.TTF" ,
 plt.figure(figsize=(30,20))
 plt.imshow(wc)  
 plt.axis('off')    
-plt.show()     
+plt.show()       
