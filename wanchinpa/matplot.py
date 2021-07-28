@@ -11,7 +11,7 @@ kkma = Kkma( )
   
 
 #Step 2 . 텍스트 파일을 불러와서 형태소 분석을 합니다.
-data1 = open("c:\\data\\완주여행_2017.txt").read( )
+data1 = open("wanchinpa\완주여행_2017.txt").read( )
 data1
   
 print(data1)
@@ -51,7 +51,7 @@ print("2.단어별 빈도수:",data5)
 # ', 13), ('완주군', 13), ('다시', 13), ('꼭', 12), ('저글링', 12), ('대표', 12), ('돼지', 12), ('코', 12), ('제', 12), ('가족', 12), ('또', 12), ('올해', 12), ('전주', 12), ('율', 12), ('하루', 11), ('분', 11), ('좀', 11), ('위', 11), ('프로그램', 11), ('줄', 11), ('부스', 11), ('이', 11), ('현장', 11), ('그', 10)]
 
 #Step 6. 불용어 제거하기 :분석을 하는 것에 있어서는 큰 도움이 되지 않는 단어 제거
-sword = open("c:\\data\\와푸gsub.txt").read()
+sword = open("wanchinpa\와푸gsub.txt").read()
 #print(sword)
 data6 = [ each_word for each_word in data3
           if each_word not in sword ]
@@ -79,14 +79,14 @@ import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt  #pyplot 모듈의 각각의 함수를 사용해서 그래프를 만들고 변화를 줄 수 있습니다.
 import matplotlib 
 
-font_location="C:\Windows\Fonts\H2GTRE.TTF"
+font_location="wanchinpa\Fonts\H2HDRM.TTF"
 font_name=fm.FontProperties(fname=font_location).get_name()
 matplotlib.rc('font',family=font_name)
 plt.figure(figsize=(20,10))
 
 import nltk
-from nltk.probability import FreqDist
+from nltk.probability import FreqDist 
     
 data11 = FreqDist(data7)  #FreqDist 클래스는 문서에 사용된 단어(토큰)의 사용빈도 정보를 담는 클래스이다.
 data11.plot(50)   
-           
+             
